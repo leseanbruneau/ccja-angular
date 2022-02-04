@@ -1,0 +1,62 @@
+<div class="container comptop">
+  <p class='display-4'>Angular Tips and Tricks</p>
+  <hr />
+  <p><strong>Build and Deploy Angular application to Firebase Project</strong></p>
+  <p>I create two separate directories on my development workstation</p>
+  <ul>
+      <li>Angular application (%%app_root_directory%%)</li>
+      <li>Firebase deployment directory %%firebase_deploy_directory%%</li>
+  </ul>
+  <p>1. Setup Firebase Deployment Directory </p>
+  <p>NOTE:  Linux commands from %%firebase_deploy_directory%%</p>
+  <ul>
+    <li><strong>cd %%firebase_deploy_directory%%</strong></li>
+    <li><strong>firebase login</strong></li>
+    <li>Click login http link - login with gmail account </li>
+    <li><strong>firebase init</strong></li>
+    <li>Answer setup questions for Firebase web hosting</li>
+    <li><strong>firebase logout</strong></li>
+  </ul>
+  <p>2. Create Angular application production deployment build</p>
+  <ul>
+    <li><strong>cd %%app_root_directory%%</strong></li>
+    <li><strong>ng build --prod</strong></li>
+      <li><strong>cp -r dist/angular-ccja/* %%firebase_deploy_directory%%/dist</strong></li>
+  </ul>
+  <p>3. Deploy Angular application to Firebase web hosting site</p>
+  <ul>
+    <li><strong>cd %%firebase_deploy_directory%%</strong></li>
+    <li><strong>firebase login</strong></li>
+    <li><strong>firebase deploy</strong></li>
+    <li><strong>firebase logout</strong></li>
+  </ul>
+  <br />
+  <p><strong>Angular - Create new Angular application</strong></p>
+  <p>Create new Angular application: </p>
+  <p class="px-4"><strong>ng new %%angular-app-name%%</strong> </p>
+  <p>where %%angular-app-name%% is name of new Angular project.</p>
+  <br />
+  <p><strong>Sample - Possible node packages to install</strong></p>
+  <ul>
+    <li><strong>npm i -g @angular/core</strong></li>
+    <li><strong>npm i -g @angular/cli</strong></li>
+    <li><strong>npm i -g firebase-tools</strong></li>
+  </ul>
+  <br />
+  <p><strong>GitHub Pages - Simple Static Website Hosting</strong></p>
+  <p class="px-4">Create Repository = <strong>%%github_username%%.github.io</strong> where %%github_username%% is your GitHub username</p>
+  <p class="px-4">Clone your <strong>%%github_username%%.github.io</strong> repository to your workstation</p>
+  <br />
+  <p class='display-5'><strong>Linux Environment Setup</strong></p>
+  <br />
+  <p><strong>Virtual Machine Install</strong></p>
+  <a href="https://medium.com/@leseanbruneau/install-and-configure-ubuntu-workstation-virtual-machine-f5443cd83259" >
+      Oracle VirtualBox - Virtual Machine setup (Ubuntu)
+  </a>
+  <br /> <br />
+  <p><strong>Command line / Node / NPM</strong></p>
+  <p>Linux command to fix for that stupid "ENOSPC: System limit for number of file watchers reached" error message:</p>
+  <p class="px-4"><strong>echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p</strong></p>
+  <br />
+  <br />
+</div>

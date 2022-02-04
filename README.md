@@ -1,4 +1,10 @@
-# CcjaAngular
+# CCJA - Angular: Project Description
+
+Code Challenge Journal Application (CCJA) - Angular
+
+Simple Angular application to use routing and external Restful API call to pull in data.
+
+## ccja-angular 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.2.
 
@@ -6,22 +12,53 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Default project setup
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+git clone https://github.com/leseanbruneau/ccja-angular.git
 
-## Build
+cd ccja-angular
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+npm install
 
-## Running unit tests
+ng serve
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Change Data Source
 
-## Running end-to-end tests
+/src/app/components/sprints/sprints.components.ts
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Variable sourceData - where data is pulled from; number value
+  Options are
+  1 - Local Variable
+  2 - REST API using a localhost endpoint
+  3 - REST API using a remote endpoint
 
-## Further help
+### 1 - Local Variable
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Application will pull data from
+
+/src/app/services/local-var-test.service.ts
+
+Data is hard coded - need to recompile when data is updated
+
+### 2 - REST API using a localhost endpoint
+
+Application will pull data from 
+
+/src/app/services/local-var-test.service.ts
+
+Data is hard coded - need to recompile when data is updated
+
+Note:  More information regarding running json-server locally, see
+
+/db/json-server-readme.txt
+
+
+### 3 - REST API using a remote endpoint
+
+Application will pull data from
+
+/src/app/model/UtilConstants.ts
+
+remoteEndpointApiUrl
+
+This variable will define external endpoint of data.  Intended for an endpoint of external data source.

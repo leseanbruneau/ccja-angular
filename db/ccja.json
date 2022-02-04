@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "sprintnbr": 1,
+    "sprinttitle": "2022 Projects Setup",
+    "sprintgoals": [
+      "Update Angular and React CCJA web sites",
+      "Update external JSON file tracker",
+      "Update landsharkpark-mn and leseanbruneau-blog web sites",
+      "Identify, define 2022 projects for challenge"
+    ],
+    "days": [
+      {
+        "sprintDay": 1,
+        "challengeDay": 1,
+        "date": "20220120",
+        "dayNotes": [
+          "Update Angular CCJA web site",
+          "Latest Angular and NPM versions"
+        ]
+      },
+      {
+        "sprintDay": 2,
+        "challengeDay": 2,
+        "date": "20220121",
+        "dayNotes": [
+          "Update React CCJA web site",
+          "Latest React and NPM versions",
+          "Created external JSON file endpoint for both Angular and React CCJA sites"
+        ]
+      }
+    ]
+  }
+]
